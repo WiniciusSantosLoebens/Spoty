@@ -65,6 +65,13 @@ flutter:
      - assets/images/facebook.png
      - assets/images/google.png
      - assets/images/Logo.png
+     - assets/images/numero01.png
+     - assets/images/lupa.png
+     - assets/images/bluetooth.png
+     - assets/images/beetles.png
+     - assets/images/inicio.png
+     - assets/images/legenda.png
+     - assets/images/album.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

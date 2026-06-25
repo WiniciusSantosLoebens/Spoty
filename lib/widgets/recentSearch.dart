@@ -1,41 +1,48 @@
 import 'package:flutter/material.dart';
 
-Widget RecentSearch(@required bool isArtista, @required String foto, @required String nome, @required String banda){
+Widget RecentSearch(@required bool isArtista, @required String image, @required nome){
   return Row(
-    spacing: 16,
+    spacing: 15,
     children: [
       !isArtista ? Container(
-        height: 80,
-        width: 80,
+        height: 100,
+        width: 100,
         decoration: BoxDecoration(
-          borderRadius: .circular(12),
-          image: DecorationImage(image: NetworkImage('foto') , fit: .cover)
+            borderRadius: .circular(12),
+            image: DecorationImage(image: NetworkImage(image), fit: .cover)
         ),
-      ):Container(
-        height: 80,
-        width: 80,
+      ):
+      Container(
+        height: 100,
+        width: 100,
         decoration: BoxDecoration(
             shape: .circle,
-        image: DecorationImage(image: NetworkImage('foto') , fit: .cover)
+            image: DecorationImage(image: NetworkImage(image), fit: .cover)
         ),
       ),
       Column(
-        mainAxisAlignment: .start,
         crossAxisAlignment: .start,
         children: [
-          Text(nome ,
+          Text(nome,
             textAlign: .start,
             style: TextStyle(
-            color: Colors.white,
-            fontWeight: .bold,
-            fontSize: 17,
-          ),),
-          Text(banda ,
+                fontSize: 15,
+                color: Colors.white,
+                fontWeight: .bold
+            ),),
+          !isArtista ?
+          Text("Album",
             textAlign: .start,
             style: TextStyle(
-            color: Colors.white,
-            fontSize: 13,
-          ),)
+              fontSize: 15,
+              color: Colors.white,
+            ),):
+          Text("Artista",
+            textAlign: .start,
+            style: TextStyle(
+              fontSize: 15,
+              color: Colors.white,
+            ),)
         ],
       )
     ],

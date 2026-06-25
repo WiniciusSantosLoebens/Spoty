@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:spoty/pages/busca.dart';
 import 'package:spoty/pages/home.dart';
 import 'package:spoty/pages/artistas.dart';
+import 'package:spoty/pages/music.dart';
+import 'package:spoty/pages/playlist.dart';
 import 'package:spoty/pages/podcasts.dart';
 
 void main() {
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(
+            seedColor: Colors.deepPurple),
       ),
       initialRoute: '/busca',
       routes:{
@@ -25,6 +28,8 @@ class MyApp extends StatelessWidget {
         '/artistas': (context) => Artistas(),
         '/podcast': (context) => Podcasts(),
         '/busca': (context) => Busca(),
+        '/playlist': (context) => Playlist(),
+        '/music': (context) => Music(),
       },
     );
   }
